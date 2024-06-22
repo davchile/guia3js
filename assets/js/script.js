@@ -47,24 +47,24 @@
 // })
 
 //**Funciones con multiples parametros con el evento click
-const addBorder = (id, color)=> {
-    const element = document.querySelector(id)
-    element.style.border = "3px solid " + color //utilizo un espacio para concatenar
-}
+// const addBorder = (id, color)=> {
+//     const element = document.querySelector(id)
+//     element.style.border = "3px solid " + color //utilizo un espacio para concatenar
+// }
 
-const img1 =document.querySelector("#imagen-1")
-const img2 =document.querySelector("#imagen-2")
-const img3 =document.querySelector("#imagen-3")
+// const img1 =document.querySelector("#imagen-1")
+// const img2 =document.querySelector("#imagen-2")
+// const img3 =document.querySelector("#imagen-3")
 
-img1.addEventListener("click", ()=> {
-    addBorder("#imagen-1", "red")
-})
-img2.addEventListener("click", ()=> {
-    addBorder("#imagen-2", "blue")
-})
-img3.addEventListener("click", ()=> {
-    addBorder("#imagen-3", "black")
-})
+// img1.addEventListener("click", ()=> {
+//     addBorder("#imagen-1", "red")
+// })
+// img2.addEventListener("click", ()=> {
+//     addBorder("#imagen-2", "blue")
+// })
+// img3.addEventListener("click", ()=> {
+//     addBorder("#imagen-3", "black")
+// })
 
 //**Return de las funciones (sirve para guardar el resultado de una operacion y usarlo despues)
 // const sum = (a, b)=> { //declaro los parametros
@@ -178,3 +178,22 @@ img3.addEventListener("click", ()=> {
 // btn3.addEventListener("click", ()=> {
 //     paint("green")
 // })
+
+//**Incrementando el tamaño del texto */
+function Size(fontSize = 1) {
+    element = document.querySelector("p")
+    element.style.fontSize = fontSize + "px "
+}
+const btn1 = document.querySelector("#btn-1") 
+const btn2 = document.querySelector("#btn-2") 
+const btn3 = document.querySelector("#btn-3")
+
+btn1.addEventListener("click", ()=> {
+    Size()
+})
+btn2.addEventListener("click", ()=> {
+    Size(2)
+})
+btn3.addEventListener("click", ()=> {
+    Size(10)
+})
