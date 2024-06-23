@@ -180,20 +180,101 @@
 // })
 
 //**Incrementando el tamaño del texto */
-function Size(fontSize = 1) {
-    element = document.querySelector("p")
-    element.style.fontSize = fontSize + "px "
-}
-const btn1 = document.querySelector("#btn-1") 
-const btn2 = document.querySelector("#btn-2") 
-const btn3 = document.querySelector("#btn-3")
+// function Size(fontSize = 1) {
+//     element = document.querySelector("p")
+//     element.style.fontSize = fontSize + "px "
+// }
+// const btn1 = document.querySelector("#btn-1") 
+// const btn2 = document.querySelector("#btn-2") 
+// const btn3 = document.querySelector("#btn-3")
 
-btn1.addEventListener("click", ()=> {
-    Size()
-})
-btn2.addEventListener("click", ()=> {
-    Size(2)
-})
-btn3.addEventListener("click", ()=> {
-    Size(10)
-})
+// btn1.addEventListener("click", ()=> {
+//     Size()
+// })
+// btn2.addEventListener("click", ()=> {
+//     Size(2)
+// })
+// btn3.addEventListener("click", ()=> {
+//     Size(10)
+// })
+
+//**Ejemplo de función que devuelve valor y otra que no devuelve valor */
+// function ejemplo() {
+//     console.log("hola mundo")
+// }
+// a = ejemplo()
+// console.log(a)
+
+
+//**Creando la función multiplicar */
+// function por_dos(a, b) {
+//     return a * b
+// }
+// const result = por_dos(5, 10)
+// alert(result)
+
+//**Eventos */
+// function alertar() { //crea una función que solo emite una alerta
+//     alert("hola")
+// }
+// btn = document.querySelector("button")
+// btn.addEventListener("click", alertar) //escucha al botón e invoca la alerta, este es el evento
+
+//**Funciones anónimas */
+// btn = document.querySelector("button")
+// btn.addEventListener("click", ()=> {
+//     alert("hola")
+// })
+
+//**Funciones como argumentos */
+// function execFunction (argFunc) {
+//     argFunc()
+// }
+// execFunction(function() { //función anónima
+//     alert("hola")
+// })
+
+//**Expresión de función ¿que es hoising?*/
+// function alertar() {
+//     alert("hola")
+// }
+// alertar()
+
+//**Arrow functions y addEvent... */
+// btn = document.querySelector("button")
+// btn.addEventListener("click", () => alert("hola"))
+
+//**Eventos del teclado */
+// document.addEventListener("keydown", function(event) {
+//     if (event.key ==="a" || event.key ==="A") {
+//         agregarElemento()
+//     } else if (event.key === "d" || event.key === "D") {
+//         eliminarElemento()
+//     }
+// })
+
+// function agregarElemento() {
+//     const contenedor = document.querySelector("#contenedor")
+//     const nuevoElemento = document.createElement("div")
+//     nuevoElemento.textContent = "Elemento agregado"
+//     contenedor.appendChild(nuevoElemento)
+// }
+
+// function eliminarElemento() {
+//     const contenedor = document.querySelector("#contenedor")
+//     const elementos = contenedor.querySelectorAll("div")
+//     if (elementos.length > 0) {
+//         contenedor.removeChild(elementos[elementos.length - 1])
+//     }
+// }
+
+//**Hoisting */
+// x()
+// function x() {           //declaramos a la funcion a pesar de haberla invocado antes
+//     console.log("hola")
+// }
+
+y()
+y = function() {            // esto genera un error por ser una expresion de funcion
+    console.log("hola")
+}
